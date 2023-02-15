@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alone at home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<!-- Главная страница - Landing Page – index.html -->
+
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="index.html">
+                    <div class="logo"><img src="img/logo.png" alt="logo"></div>
+                </a>
+                <input type="checkbox" name="hamburger" id="toggle__menu">
+                <label for="toggle__menu" class="menu__btn">
+                    <span></span>
+                </label>
+                <ul class="menu__box">
+                    <li><a href="#promotions" class="menu__item active">Акции</a></li>
+                    <li><a href="search.html" class="menu__item">Поиск</a></li>
+                    <li><a href="booking.html" class="menu__item">Управление бронированием</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Алгоритм бронирования -->
+    <section class="booking">
+        <div class="container">
+            <div class="booking-wrapper">
+                <h2 class="booking__title">Алгоритм бронирования</h2>
+                <div class="booking__row">
+                    <div class="booking__block">
+                        <img src="img/icons/calendar-outline.svg" alt="">
+                        <h3>1. Выбрать даты и место самоизоляции</h3>
+                    </div>
+                    <div class="booking__block">
+                        <img src="img/icons/people-outline.svg" alt="">
+                        <h3>2. Выбрать количество проживающих</h3>
+                    </div>
+                    <div class="booking__block">
+                        <img src="img/icons/home-outline.svg" alt="">
+                        <h3>3. Выбрать желаемый кемпинг, соответствующий условиям выше</h3>
+                    </div>
+                    <div class="booking__block">
+                        <img src="img/icons/heart-outline.svg" alt="">
+                        <h3>4. Выбрать понравившийся дом-бочку на территории кемпинга</h3>
+                    </div>
+                    <div class="booking__block">
+                        <img src="img/icons/add-circle-outline.svg" alt="">
+                        <h3>5. Определить перечень дополнительных услуг</h3>
+                    </div>
+                    <div class="booking__block">
+                        <img src="img/icons/bag-check-outline.svg" alt="">
+                        <h3>6. Оформить заказ</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Информация о компании -->
+    <section class="info">
+        <div class="container">
+            <div class="info-wrapper">
+                <div class="info-block">
+                    <h2 class="title">О компании</h2>
+                    <p>«Alone at home»,
+                        Предоставляем услуги гостеприимства для желающих с удобством провести дни самоизоляции. <br>
+                        <u>Главная цель компании</u> – сделать дни вынужденной самоизоляции максимально комфортными и
+                        безопасными для наших клиентов. <br> <br>
+                        Клиенты «Alone at home» имеют возможность забронировать один из уютных домов-бочек,
+                        расположенных в живописнейших уголках нашей страны. Помимо проживания, компания предоставляет
+                        широкий спектр услуг, таких как: питание, медицинское сопровождение, услуги курьера и т.д.
+                    </p>
+                    <h2 class="title">Девиз</h2>
+                    <p>Девиз компании «Alone at home»: <br> Комфортно для Вас – безопасно для общества.</p>
+                    <h2 class="title">Отзывы</h2>
+                    <div class="reviews">
+                        <div class="reviews__block">
+                            <img src="img/reviews/img_1.png" alt="">
+                            <h3>Игорь</h3>
+                            <p>Спасибо большое! Изоляция прошла с пользой! Побольше бы таких проектов! Успехов вам!</p>
+                        </div>
+                        <div class="reviews__block">
+                            <img src="img//reviews/img_2.png" alt="">
+                            <h3>Елена</h3>
+                            <p>Понравилось оформление домов-бочек и спектр услуг! Для семьи из 4-х человек все условия,
+                                особенно хотелось отметить качество медицинских услуг! Однозначно рекомендую!</p>
+                        </div>
+                        <div class="reviews__block">
+                            <img src="img/reviews/img_3.png" alt="">
+                            <h3>Петр Иванович </h3>
+                            <p>Всё очень понравилось. Изолировались вдвоем с супругой, порадовали цены (особенно
+                                семейные акции). Условия проживания на высоком уровне.</p>
+                        </div>
+                        <div class="reviews__block">
+                            <img src="img/reviews/img_4.jpg" alt="">
+                            <h3>Олег</h3>
+                            <p>Решил совместить приятное с полезным. Отметили в изоляции очередную годовщину с супругой,
+                                качество услуг отличное и главное вокруг никого))) Рекомендую!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Форма поиска -->
+    <section class="form__search">
+        <div class="container">
+            <h2 class="title">Форма поиска</h2>
+            <div class="form__search-wrapper">
+                <form action="search.html" method="get">
+                    <label for="">Выбор региона:</label>
+                    <select name="" id="">
+                        <option value="">Республика Татарстан</option>
+                        <option value="">Удмуртская Республика</option>
+                        <option value="">Якутия</option>
+                    </select>
+
+                    <label for="">Дата заселения:</label>
+                    <input type="datetime-local" name="" id="">
+
+                    <label for="">Дата выселения:</label>
+                    <input type="date" name="" id="">
+
+                    <label for="">Количество человек:</label>
+                    <input type="number" name="" id="" min="1" max="5" placeholder="(от 1 до 5 включительно)">
+
+                    <button type="submit">Поиск</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Акции -->
+    <section class="promotions" id="promotions">
+        <div class="container">
+            <h2 class="title">Акции</h2>
+            <div class="promotions-wrapper">
+                <div class="promotions__block">
+                    <img src="img/promotions/promotion_1.jpg" alt="">
+                    <div class="promotions__body">
+                        <h3>Скидка до 60%. 2 или 3 дня проживания в доме-бочке (до 5 человек) в кемпинге «Дача
+                            Поддубного»</h3>
+                        <p>Устали от городского шума, хотите провести время вынужденной изоляции на свежем воздухе и
+                            отрешиться от повседневных хлопот? Приезжайте на базу отдыха «Дача Поддубного». Здесь вас
+                            ждут комфортные и очень уютные домики-бочки, великолепные природные пейзажи и тишина,
+                            нарушаемая лишь пением птиц и мерным шумом крон величественных деревьев.</p>
+                        <form action="seat.html" method="get">
+                            <button>Подробнее</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="promotions__block">
+                    <img src="img/promotions/promotion_2.jpg" alt="">
+                    <div class="promotions__body">
+                        <h3>Скидка до 51%. Уютное место самоизоляции для семьи в обустроенном кемпинге «Лесная поляна»
+                        </h3>
+                        <p>Кемпинг «Лесная поляна» расположен в живописной загородной местности на берегу чистого озера.
+                            В этом месте можно провести время самоизоляции в стороне от городской суеты с пользой для
+                            здоровья. <br> Кемпинг располагает благоустроенной охраняемой территорией, обработанной
+                            специальными средствами от клещей. В распоряжении изолирующихся находятся столы, скамейки,
+                            зона для костра, санитарный узел и дровяник. Для маленьких гостей обустроены песочница с
+                            игрушками, качели и детский бассейн. <br> Работают пункты проката велосипедов и рыболовных
+                            снастей.</p>
+                        <form action="seat.html" method="get">
+                            <button>Подробнее</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="promotions__block">
+                    <img src="img/promotions/promotion_3.jpg" alt="">
+                    <div class="promotions__body">
+                        <h3>Скидка до 50%. Изолируйся на месяц в обустроенном кемпинге «Бочки Диогена» со своей второй
+                            половинкой</h3>
+                        <p>Уютные небольшие домики-бочки для желающих провести самоизоляцию отдыха вдвоем. <br> В домике
+                            двуспальная кровать, телевизор, барный холодильник, стол, два стула, душевая кабина, горячая
+                            и холодная вода.</p>
+                        <form action="seat.html" method="get">
+                            <button>Подробнее</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Форма для подписки на закрытые акции -->
+    <section class="subscription">
+        <div class="container">
+            <h2 class="title">Подписаться на закрытые акции</h2>
+            <div class="subscription-wrapper">
+                <form action="#" method="get" class="subscribe">
+                    <input type="email" name="subscribe-txt" id="subscribe" placeholder="Введите ваш E-mail">
+                    <button type="submit" value="subscribe">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <hr style="margin-bottom: 30px;">
+            <div class="footer-wrapper">
+                <h2>Телефон: <a href="tel:+78001001010" class="phone">8 (800) 100-10-10</a> <br>
+                    <a href=”http://xxxxxx-m1.wsr.ru/return”>Возврат</a> <br>
+                    <a href=”http://xxxxxx-m1.wsr.ru/feedback”>Обратная связь</a>
+                </h2>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

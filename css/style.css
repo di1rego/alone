@@ -1,0 +1,524 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 1em;
+    color: #000;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+:root {
+    --light: tan;
+    --green: seagreen;
+    --t4s: all .4s ease;
+}
+
+p {
+    font-size: clamp(11px, 5vw, 19px);
+}
+
+/* Главная страница - Landing Page – index.html */
+
+/* Шапка сайта */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header-wrapper {
+    background-color: var(--light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    height: 70px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, .4);
+}
+
+.logo img {
+    height: 50px;
+    order: 2;
+    display: block;
+}
+
+.menu__box {
+    display: flex;
+    gap: 30px;
+}
+
+.menu__item {
+    color: #fff;
+    font-size: clamp(11px, 5vw, 24px);
+}
+
+.menu__item:hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+    color: #000;
+}
+
+#toggle__menu {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    /* Гамбургер меню */
+    .menu__btn {
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        order: 1;
+    }
+
+    .menu__btn span,
+    .menu__btn span::before,
+    .menu__btn span::after {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: var(--t4s);
+    }
+
+    .menu__btn span::before {
+        content: "";
+        top: -8px;
+        transition: 0s;
+    }
+
+    .menu__btn span::after {
+        content: "";
+        top: 8px;
+    }
+
+    #toggle__menu~.menu__box {
+        /* visibility: hidden; */
+        top: -100vh;
+    }
+
+    #toggle__menu:checked~.menu__box {
+        /* visibility: visible; */
+        top: 100%;
+    }
+
+    #toggle__menu:checked~.menu__btn span {
+        transform: rotate(45deg);
+        transition: var(--t4s);
+    }
+
+    #toggle__menu:checked~.menu__btn span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    #toggle__menu:checked~.menu__btn span::after {
+        top: 0;
+        transform: rotate(90deg);
+        transition: var(--t4s);
+    }
+
+    .menu__box {
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+        left: 0;
+        background-color: rgba(210, 180, 140, .9);
+        width: 100%;
+        height: calc(100vh - 70px);
+        transition: var(--t4s);
+        z-index: -999;
+    }
+
+    .menu__box li {
+        width: 100%;
+        height: 100%;
+        transition: var(--t4s);
+    }
+
+    .menu__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #fff;
+        text-decoration: none;
+        font-size: clamp(19px, 5vw, 24px);
+    }
+
+    .menu__item:hover {
+        color: #000;
+    }
+
+    .active {
+        text-decoration: underline;
+        color: #000;
+    }
+}
+
+/* Алгоритм бронирования */
+.booking__title {
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.booking__title::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 3px;
+    bottom: 5px;
+    border-radius: 1.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--light);
+}
+
+.booking-wrapper {
+    background: url("../img/bg.jpg") no-repeat;
+    max-width: 1024px;
+    height: 100%;
+    background-size: cover;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.booking__block img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    justify-self: end;
+    align-self: center;
+}
+
+.booking__block {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-column-gap: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .6);
+    align-items: center;
+    padding: 10px;
+}
+
+.booking__row {
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+/* Информация о компании */
+.title {
+    text-align: center;
+    position: relative;
+    padding-top: 70px;
+    margin-bottom: 30px;
+    font-size: clamp(19px, 5vw, 24px);
+}
+
+.title::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: var(--light);
+}
+
+.info-block {
+    text-align: center;
+    padding: 10px;
+}
+
+.info-block p {
+    font-size: clamp(11px, 5vw, 19px);
+}
+
+.info-wrapper {
+    background-color: #eee;
+    border-radius: 0 0 32px 32px;
+    border-top: 5px solid var(--light);
+}
+
+.reviews__block img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.reviews__block {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, .2);
+    margin: 10px;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    grid-gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Форма поиска */
+.form__search {
+    margin: 10px 0;
+}
+
+.form__search-wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form__search-wrapper form {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr);
+    grid-row-gap: 10px;
+}
+
+.form__search-wrapper {
+    background-color: var(--light);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, .2);
+    border: 2px solid #eee;
+}
+
+.form__search-wrapper form p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search__btn {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.form__search-wrapper form label {
+    font-size: clamp(11px, 5vw, 19px);
+    white-space: nowrap;
+}
+
+.form__search-wrapper form select,
+input {
+    padding: 10px;
+    height: 40px;
+    border: 2px solid #eee;
+    outline: none;
+}
+
+.form__search-wrapper form input:focus {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.form__search-wrapper form button,
+.promotions__block button,
+.subscribe button {
+    min-width: 200px;
+    justify-self: center;
+    padding: 10px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, .2);
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #eee;
+    background-color: var(--light);
+    color: #eee;
+    font-weight: 400;
+    cursor: pointer;
+    transition: var(--t4s);
+}
+
+.form__search-wrapper form button:hover,
+.promotions__block button:hover,
+.subscribe button:hover {
+    background-color: var(--green);
+    box-shadow: none;
+    transition: all 1s ease;
+}
+
+/* Акции */
+.promotions-wrapper {
+    display: grid;
+    row-gap: 60px;
+    margin: 10px 10px 70px;
+}
+
+.promotions__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.promotions__block img {
+    width: clamp(250px, 90vw, 500px);
+    object-fit: cover;
+    justify-self: center;
+    box-shadow: -4px -4px 5px rgba(0, 0, 0, .1);
+}
+
+.promotions__body h3 {
+    margin-bottom: 10px;
+}
+
+.promotions__body button {
+    margin-top: 15px;
+}
+
+.promotions__body {
+    margin: 0px 10px;
+}
+
+@media (max-width: 800px) {
+    .promotions__block {
+        grid-template-columns: 1fr;
+    }
+
+    .promotions__body button {
+        margin: 15px auto 0px auto;
+    }
+}
+
+/* Форма для подписки на закрытые акции */
+.subscribe {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.subscribe input {
+    width: 200px;
+    border-radius: 0px;
+    border: 3px solid var(--light);
+}
+
+/* Подвал сайта */
+.footer {
+    margin: 10px;
+    padding: 70px 0 35px;
+}
+
+.footer-wrapper {
+    text-align: center;
+}
+
+.footer-wrapper h2 {
+    font-size: clamp(11px, 5vw, 24px);
+}
+
+.phone {
+    font-weight: 400;
+}
+
+/* Страница с результатами поиска кемпингов – search.html */
+.heart {
+    width: 40px;
+    height: 40px;
+    background-color: var(--light);
+    display: block;
+    border-radius: 6px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, .2);
+    position: relative;
+}
+
+.heart::before {
+    position: absolute;
+    content: "";
+    background: url("../img/icons/heart-outline.svg") center center no-repeat;
+    background-size: 24px;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+}
+
+#heart_1:checked~.heart,
+#heart_2:checked~.heart,
+#heart_3:checked~.heart,
+#heart_4:checked~.heart {
+    background-color: firebrick;
+    box-shadow: none;
+}
+
+#heart_1,
+#heart_2,
+#heart_3,
+#heart_4 {
+    display: none;
+}
+
+.heart-w {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Страница выбора дома-бочки из свободных в кемпинге – seat.html */
+
+/* Страница бронирования – booking.html */
+.form__search-wrapper form h2 {
+    text-align: center;
+    margin-top: 15px;
+    color: #fff;
+    font-style: italic;
+}
